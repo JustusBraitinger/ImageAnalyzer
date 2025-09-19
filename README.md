@@ -12,4 +12,5 @@ It is possible to decide which attributes should be checked, just change this li
         ]
 ```
 
-This repo also includes 3 testimage folders 
+This repository also contains three test image folders, each of which includes manually augmented images for a specific check
+
