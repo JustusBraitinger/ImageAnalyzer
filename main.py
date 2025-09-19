@@ -19,12 +19,13 @@ class SharpnessCheck:
     
     """
     def run(self, image, analyzer):
-        if not analyzer.check_welding(image):
-            return {"sharpness": None, "blurry": False}
+        # if not analyzer.check_welding(image):
+        #     return {"sharpness": None, "blurry": False}
 
         gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
         laplacian = cv2.Laplacian(gray, cv2.CV_64F)
         lap_var = laplacian.var()
+        print(lap_var)
         is_blurry = lap_var < analyzer.threshold_sharp
 
         if is_blurry:
@@ -76,7 +77,7 @@ class ImageAnalyzer:
     Iterates through every image in a given folder and applies the checks
     defined in self.checks. Results are saved to a CSV file.
     """
-    def __init__(self, folder_path, threshold_torch=70, threshold_sharp=12, flags=0, output_csv="analysis_results.csv"):
+    def __init__(self, folder_path, threshold_torch=70, threshold_sharp=10, flags=0, output_csv="analysis_results.csv"):
         self.folder_path = folder_path
         self.threshold_torch = threshold_torch
         self.threshold_sharp = threshold_sharp
@@ -86,7 +87,9 @@ class ImageAnalyzer:
 
         # Put your desired checks here
         self.checks = [
-            DarknessCheck(),
+            SharpnessCheck(),
+            #TorchPositionCheck(),
+            #DarknessCheck(),
             
         ]
 
@@ -202,7 +205,7 @@ class ImageAnalyzer:
 
 
 if __name__ == "__main__":
-    folder = r"C:\Users\justu\Desktop\Neuer Ordner\Helligkeitsstufen"
+    folder = r"C:\Users\justu\Desktop\Image_Analyzer\Schaerfestufen"
     analyzer = ImageAnalyzer(folder_path=folder, threshold_torch=60, threshold_sharp=12.0)
 
     # Fall 1: Alle Checks
