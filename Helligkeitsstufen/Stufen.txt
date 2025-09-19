@@ -1,0 +1,43 @@
+darker0.jpeg
+Laplace Varianz: 4.139680555555556
+
+
+darker1.jpeg
+Laplace Varianz: 8.750833333333333
+
+
+darker2.jpeg
+Laplace Varianz: 13.299833333333334
+
+
+darker3.jpeg
+Laplace Varianz: 17.88952777777778
+
+
+darker4.jpeg
+Laplace Varianz: 22.701930555555556
+
+
+darker5.jpeg
+Laplace Varianz: 27.0606875
+
+
+darker6.jpeg
+Laplace Varianz: 31.585618055555557
+
+
+darker7.jpeg
+Laplace Varianz: 36.19938194444445
+
+
+darker8.jpeg
+Laplace Varianz: 40.74577083333333
+
+
+darker9.jpeg ===> unveränderter Frame
+Laplace Varianz: 45.752652777777776
+
+
+
+
+Threshold = 25

@@ -1,0 +1,5 @@
+Blur Kernel Size: 1, Laplace Variance: 75.54269183371376
+Blur Kernel Size: 3, Laplace Variance: 21.371680447509434
+Blur Kernel Size: 5, Laplace Variance: 10.833833332990393
+Blur Kernel Size: 7, Laplace Variance: 5.063083303990912
+Blur Kernel Size: 9, Laplace Variance: 3.362546293209876
