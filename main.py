@@ -21,14 +21,6 @@ class median_L_from_RGB:
 
 
 
-
-
-
-
-
-
-
-
 class WeldingCheck:
     """
     Checks if welding is detected in the image based on median L value
